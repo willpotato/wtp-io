@@ -77,7 +77,7 @@
                 <h1 class="display-3">Welcome to my website!</h1>
                 <p class="lead">I am an avid videogame player from the United States and a novice coder! I particularly enjoy playing Minecraft, CS:GO, and Escape from Tarkov. This website isn't for anything specifically, but I'll put stuff into it as I go. Thank you for visiting!</p>
                 <hr class="my-4">
-                <p>Have any questions? <a target="_blank" href="https://www.twitch.tv/willthepotato">Message me on Twitch!</a></p>
+                <p>Have any questions? <a target="_blank" href="https://www.twitch.tv/willthepotato" data-toggle="tooltip" data-placement="bottom" title="Type /w WillThePotato {message} in chat" id="tooltip">Message me on Twitch!</a></p>
               </div>
 
 	  <!-- Headings -->
@@ -490,10 +490,15 @@
       </footer>
 
     </div>
-	=
+
     <script src="./assets/jquery.min.js"></script>
     <script src="./assets/popper.min.js"></script>
     <script src="./assets/bootstrap.min.js"></script>
     <script src="./assets/custom.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#tooltip').tooltip();
+		});
+	</script>
 
 </body></html>
