@@ -11119,3 +11119,33 @@ a.text-dark:hover, a.text-dark:focus {
 .alert-light .alert-link {
   color: #002B36;
 }
+
+/* edit beyond this point */
+
+.zoom {
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.03); /* IE 9 */
+  -webkit-transform: scale(1.03); /* Safari 3-8 */
+  transform: scale(1.03); 
+}
+
+.zoomless {
+  transition: transform 0.5s;
+}
+
+.zoomless:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+
+/* particles.js config */
+
+#particles-js{
+  height:500px;
+  width:500px;
+}
