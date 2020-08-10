@@ -11149,3 +11149,30 @@ a.text-dark:hover, a.text-dark:focus {
   height:500px;
   width:500px;
 }
+
+/* selection color */
+
+::selection {
+    background-color: #10758F;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #10758F;
+    color: #fff;
+}
+
+::-o-selection {
+    background-color: #10758F;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: #10758F;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background-color: #10758F;
+    color: #fff;
+}
