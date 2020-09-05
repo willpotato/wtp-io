@@ -119,18 +119,18 @@
         <div class="row">
           <div class="col-lg-12" style="padding-left: 0px">
             <div class="page-header">
-              <h1 id="about" style="padding-top: 0rem; padding-bottom: 0rem">About Me</h1>
+              <h1 id="about" style="padding-top: 0rem; padding-bottom: 0rem">Keycap Configurator</h1>
             </div>
           </div>
         </div>
         <ol class="breadcrumb" style="padding-top: 0.5rem; padding-bottom: 0.5rem">
           <li class="breadcrumb-item"><a href="https://bootswatch.com/solar/#" class="zoom">Docs</a></li>
           <li class="breadcrumb-item"><a href="https://bootswatch.com/solar/#" class="zoom">Library</a></li>
-          <li class="breadcrumb-item active">About</li>
+          <li class="breadcrumb-item active">GMK Config</li>
         </ol>
         <div class="jumbotron" style="padding-top: 3rem; padding-bottom: 3rem">
-          <h1 class="display-3">Welcome to my website!</h1>
-          <p class="lead">I am an avid videogamer from the United States and a novice coder! I particularly enjoy playing Minecraft, Rocket League, and Escape from Tarkov. This website isn't for anything specifically, but I'll put stuff into it as I go. Thank you for visiting!</p>
+          <h1 class="display-3">Hex Color Palette</h1>
+          <p class="lead">This is a configuration generator for my Fiverr listing which is available <a href="https://www.fiverr.com/willthepotato/professionally-render-your-keycaps-and-mechanical-keyboard">here</a>. Please specify the colors you wish to have for your modifiers, alphas, and any other keycaps. Further details can be discussed in messages. All values are hexadecimal.</p>
           <hr class="my-4">
           <p>Have any questions? <a target="_blank" href="https://www.twitch.tv/willthepotato" data-toggle="tooltip" data-placement="bottom" title="Type /w WillThePotato {message} in chat!" id="tooltip">Message me on Twitch!</a></p>
         </div>
@@ -143,12 +143,43 @@
                 <div class="bs-component; zoomless" style="padding-bottom: 1rem">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Java Seed Generation</h4>
-                      <h6 class="card-subtitle mb-2 text-muted">Minecraft Java</h6>
-                      <p class="card-text">How Java uses LCGs and hashCode() to create pseudorandom random world seeds for diverse world generation in Minecraft and the history of seed reversal.</p>
-                      <img style="height: 100%; width: 100%; display: block;" src="https://i.imgur.com/s9IFDaD.png" alt="Minecraft screenshot">
-                      <a href="https://bootswatch.com/solar/#" class="card-link">Read</a>
-                      <a class="card-link; float-right" style="margin-left: 0rem"><i>Aug. 3, 2020</i></a>
+                      <h2 class="card-title">Configuration Form</h2>
+                      <p class="card-text">
+                      <form _lpchecked="1">
+                        <fieldset>
+                          <div class="form-group">
+                            <label for="inputUsername">Fiverr name</label>
+                            <input type="username" class="form-control" id="inputUsername" aria-describedby="usernameHelp" placeholder="Enter username" maxlength = "40">
+                          </div>
+                          <div class="form-group">
+                            <label for="inputKeyset">Keyset name</label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">GMK</span>
+                              </div>
+                              <input type="username" class="form-control" id="inputKeyset" aria-describedby="keysetHelp" placeholder="Enter keyset name" maxlength = "20">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleSelect1">How many renders did you order?</label>
+                            <select class="form-control" id="exampleSelect1">
+                              <option>Basic - Just the layout render</option>
+                              <option>Standard - Layout and 2 renders</option>
+                              <option>Premium - Layout and 5 complex renders</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleTextarea">Additional notes</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            <small id="exampleTextarea" class="form-text text-muted">Contact me on Fiverr for more details — this form is just to simplify the process.</small>
+                          </div>
+                          <img style="height: 100%; width: 100%; display: block;" src="https://i.imgur.com/s9IFDaD.png" alt="Minecraft screenshot">
+                          <div style="margin-top: 1rem;">
+                            <button type="submit" class="btn btn-dark" style="background: #002b36; color: #839496;">Submit configuration</button>
+                            <small id="submitButton" class="form-text text-muted" style="float: right;">This took way too long to make. I hope you like it.</small>
+                          </div>
+                        </fieldset>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -156,13 +187,13 @@
               <div class="col-lg-4">
                 <div class="bs-component; zoomless">
                   <div class="card mb-3">
-                    <h3 class="card-header">Fiverr Commissions</h3>
+                    <h3 class="card-header">Output</h3>
                     <div class="card-body">
-                      <h5 class="card-title">High-Quality Graphics</h5>
-                      <h6 class="card-subtitle text-muted">Check out my work!</h6>
+                      <h5 class="card-title">Download link below!</h5>
+                      <h6 class="card-subtitle text-muted">gmkconfig_[username].txt</h6>
                     </div>
                     <img style="height: 100%; width: 100%; display: block;" src="https://i.imgur.com/v9q6Wyx.png" alt="Fiverr image">
-                    <div class="form-control;" id="configInput" type="text/yaml" placeholder="Configuration input here..." disabled="" style="margin: 1rem auto; width: 90%; margin-bottom: 0; padding: 0.25rem; text-align: left; color: #839496; background-color: #073642; font-family:'Lucida Console', monospace;">
+                    <div class="form-control;" id="configInput" type="text/yaml" placeholder="Configuration input here..." disabled="" style="margin: 1rem auto; width: 90%; margin-bottom: 0; padding: 0.25rem; text-align: left; color: #839496; background-color: #073642; font-family:'Lucida Console', monospace; font-size: 0.8rem;">
                       %VERSION 1.0 <br>
                       --- <br>
                       GMK Config: <br>
@@ -172,23 +203,19 @@
                        <br>
                         Renders: <br>
                           Amount    # 3 <br>
-                          Angles:   # Keyboard Facing X+ By Default <br>
-                          Render 1: # <br>
-                            Background: #ffffff <br>
-                          Render 2: # <br>
-                            Background: #ffffff <br>
-                          Render 3: # <br>
-                            Background: #ffffff <br>
+                          Render 1: # {#ffffff} <br>
+                          Render 2: # {#ffffff} <br>
+                          Render 3: # {#ffffff} <br>
                        <br>
                         Colors: <br>
-                          Modifiers: #ffffff <br>
-                          Alphas: #ffffff <br>
-                          Esc Key: #ffffff <br>
-                          Enter Key (Blank If = Mods): #ffffff <br>
-                          Backspace Key (Blank If = Mods): #ffffff <br>
-                          F1-4: #ffffff <br>
-                          F5-8: #ffffff <br>
-                          F9-12: #ffffff <br>
+                          Modifiers: {#ffffff} <br>
+                          Alphas: {#ffffff} <br>
+                          Esc (Blank If = Mods): {#ffffff} <br>
+                          Enter (Blank If = Mods): {#ffffff} <br>
+                          Backspace (Blank If = Mods): {#ffffff} <br>
+                          F1-4: {#ffffff} <br>
+                          F5-8: {#ffffff} <br>
+                          F9-12: {#ffffff} <br>
                        <br>
                       # willpotato.github.io/wtp-io/gmkconfig <br>
                       # Intended for use in Fiverr orders <br>
