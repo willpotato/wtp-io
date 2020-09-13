@@ -67,7 +67,6 @@
           });
     </script>
   </head>
-  <body style="padding-top: 30px">
 
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -170,7 +169,7 @@
                           </div>
                           <div class="form-group">
                             <label for="exampleTextarea">Additional notes</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleTextarea" rows="3" maxlength = "170"></textarea>
                             <small id="exampleTextarea" class="form-text text-muted">Contact me on Fiverr for more details — this form is just to simplify the process.</small>
                           </div>
                           <img style="height: 100%; width: 100%; display: block;" src="https://i.imgur.com/s9IFDaD.png" alt="Minecraft screenshot">
@@ -283,10 +282,7 @@
     <script src="../assets/popper.min.js"></script>
     <script src="../assets/bootstrap.min.js"></script>
     <script src="../assets/custom.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('#tooltip').tooltip();
-      });
-    </script>
+    <script>$(document).ready(function(){$("#tooltip").tooltip()});</script>
+    <script>function maxLength(t){if(!("maxLength"in t)){var e=t.attributes.maxLength.value;t.onkeypress=function(){if(this.value.length>=e)return!1}}}maxLength(document.getElementById("text"));</script>
   </body>
 </html>

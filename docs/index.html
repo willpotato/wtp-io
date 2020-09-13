@@ -21,7 +21,6 @@
 
     <!-- Page-specific code below -->
   </head>
-  <body style="padding-top: 30px">
 
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -197,10 +196,7 @@
     <script src="./assets/popper.min.js"></script>
     <script src="./assets/bootstrap.min.js"></script>
     <script src="./assets/custom.js"></script>
-    <script>
-      $(document).ready(function () {
-      	$('#tooltip').tooltip();
-      });
-    </script>
+    <script>$(document).ready(function(){$("#tooltip").tooltip()});</script>
+    <script>function maxLength(t){if(!("maxLength"in t)){var e=t.attributes.maxLength.value;t.onkeypress=function(){if(this.value.length>=e)return!1}}}maxLength(document.getElementById("text"));</script>
   </body>
 </html>
